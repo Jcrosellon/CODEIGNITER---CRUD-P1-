@@ -9,7 +9,7 @@ class AddUsers extends Migration
     public function up()
     {
         $this->forge->addField([
-            'user_id' => [
+            'User_id' => [
                 'type' => 'INT',
                 'constraint' => 11,
                 'unsigned' => true,

@@ -6,22 +6,18 @@ use CodeIgniter\Model;
 
 class UserStatusModel extends Model
 {
-    protected $table            = 'userstatuses';
-    protected $primaryKey       = 'id';
+    protected $table            = 'user_status';
+    protected $primaryKey       = 'User_status_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['User_status_name','User_status_description'];
 
     protected bool $allowEmptyInserts = false;
-    protected bool $updateOnlyChanged = true;
-
-    protected array $casts = [];
-    protected array $castHandlers = [];
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';

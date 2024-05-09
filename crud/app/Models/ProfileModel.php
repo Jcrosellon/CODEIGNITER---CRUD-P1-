@@ -7,21 +7,17 @@ use CodeIgniter\Model;
 class ProfileModel extends Model
 {
     protected $table            = 'profiles';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'Profile_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['Profile_email','Profile_name','Profile_photo','User_id_fk'];
 
     protected bool $allowEmptyInserts = false;
-    protected bool $updateOnlyChanged = true;
-
-    protected array $casts = [];
-    protected array $castHandlers = [];
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
