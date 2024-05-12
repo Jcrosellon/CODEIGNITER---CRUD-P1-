@@ -94,7 +94,7 @@ class UserStatus extends Controller
             $dataModel = [
                 'User_status_name' => $this->request->getVar('User_status_name'),
                 'User_status_description' => $this->request->getVar('User_status_description'),
-                'update_at' => $today
+                'updated_at' => $today
             ];
             //update data model
             if ($this->StatusModel->update($id, $dataModel)) {
@@ -145,7 +145,7 @@ class UserStatus extends Controller
             'User_status_id' => $this->request->getVar('User_status_id'),
             'User_status_name' => $this->request->getVar('User_status_name'),
             'User_status_description' => $this->request->getVar('User_status_description'),
-            'update_at' => $this->request->getVar('update_at')
+            'updated_at' => $this->request->getVar('updated_at')
         ];
         return $data;
     }
