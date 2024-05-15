@@ -11,6 +11,9 @@
     <title><?= $title ?></title>
 </head>
 <body>
+    <!--Preload -->
+    <?php require_once('../app/Views/preload/preload.php') ?>
+    <!--End Preload -->
     <!--Navbar-->
     <?php require_once('../app/Views/nav/navbar.php') ?>
     <!--End Navbar-->
@@ -24,7 +27,7 @@
     </div>
     <!--End Container-->
     <!--Footer-->
-    <?php require_once('../app/Views/footer.php') ?>
+    <?php require_once('../app/Views/footer/footer.php') ?>
     <!--End Footer-->
     <!--Modal-->
     <div class="modal fade" id="my-modal" tabindex="-1" aria-labelledby="my-modalLabel" aria-hidden="true">
