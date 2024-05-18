@@ -13,7 +13,7 @@ class AddUserRoles extends Migration
                 'type' => 'INT',
                 'constraint' => 11,
                 'unsigned' => true,
-                'auto_increment' => true,
+                'auto_increment' => true
             ],
             'Roles_name' => [
                 'type' => 'VARCHAR',
@@ -23,15 +23,15 @@ class AddUserRoles extends Migration
             'Roles_description' => [
                 'type' => 'VARCHAR',
                 'constraint' => 300,
-                'null' => true,
+                'null' => true
             ],
-            'created_at' => [
+            'create_at' => [
                 'type' => 'TIMESTAMP',
-                'null' => true,
+                'null' => true
             ],
-            'updated_at' => [
+            'update_at' => [
                 'type' => 'TIMESTAMP',
-                'null' => true,
+                'null' => true
             ],
         ]);
 

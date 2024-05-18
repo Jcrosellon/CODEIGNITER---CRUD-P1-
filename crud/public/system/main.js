@@ -1,7 +1,3 @@
-const LIST_CRUD=['add','edit','update','delete','show'];
-//Routes
-const UTI_STATUS="/userStatus/";
-
 class Main {
     /**
      * The constructor function initializes properties for managing a modal form in Javascript.
@@ -86,7 +82,7 @@ class Main {
         var elementsSelect = this.myForm.querySelectorAll('select');
         for (let i = 0; i < elementsInput.length; i++) {
             if (elementsInput[i].classList.contains(this.classEdit)) {
-                elementsInput[i].disabled = true;
+              elementsInput[i].disabled = true;
             } else {
                 elementsInput[i].disabled = false;
             }
@@ -144,7 +140,7 @@ class Main {
             if (element.id) {
                 if (element.tagName === 'INPUT') {
                     if (element.type === 'checkbox') {
-                        getJson[element.id] = element.Checked;
+                        getJson[element.id] = element.checked;
                     } else {
                         getJson[element.id] = element.value.trim();
                     }
@@ -201,7 +197,7 @@ class Main {
      * @returns The `setValidateForm()` function returns either `true` if the form is valid or `false` if
      * the form is not valid.
      */
-    setValidateFrom() {
+    setValidateForm() {
         const objForm = this.myForm;
         const inputs = objForm.querySelectorAll('input');
         const selects = objForm.querySelectorAll('select');

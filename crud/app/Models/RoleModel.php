@@ -19,9 +19,9 @@ class RoleModel extends Model
     // Dates
     protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
-    protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at';
+    protected $createdField  = 'create_at';
+    protected $updatedField  = 'update_at';
+    protected $deletedField  = 'delete_at';
 
     // Validation
     protected $validationRules      = [];

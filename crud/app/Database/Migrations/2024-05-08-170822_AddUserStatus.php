@@ -25,11 +25,11 @@ class AddUserStatus extends Migration
                 'constraint' => 300,
                 'null' => true,
             ],
-            'created_at' => [
+            'create_at' => [
                 'type' => 'TIMESTAMP',
-                'null' => true,
+                'null' => true
             ],
-            'updated_at' => [
+            'update_at' => [
                 'type' => 'TIMESTAMP',
                 'null' => true,
             ],

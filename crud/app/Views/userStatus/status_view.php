@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS-->
-    <?php require_once('../app/View/assets/css/css.php')?>
+    <?php require_once('../app/Views/assets/css/css.php')?>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
     <!--Title-->
     <title><?= $title ?></title>
@@ -20,7 +20,7 @@
     <!--Container-->
     <div class="container">
         <h3><?= $title ?></h3>
-        <button type="button" class="btn btn-primary" onclick="newStatus()" style="font-size: 0.5em;">ADD</button>
+        <button type="button" class="btn btn-primary" onclick="add()" style="font-size: 0.5em;">ADD</button>
         <!--Container Table-->
         <?php require_once('../app/Views/userStatus/table.php') ?>
         <!--End Container Table-->
@@ -54,7 +54,7 @@
     <?php require_once('../app/Views/assets/js/js.php') ?>
     <?php require_once('../app/Views/assets/js/dataTable.php') ?>
     <!--JS Controller-->
-    <script src="../controllers/userStatus/userStatus.js"></script>
+    <script src="../controllers/userStatus.js"></script>
 </body>
 
 </html>

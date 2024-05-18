@@ -40,7 +40,7 @@ class AddUsers extends Migration
                 'type' => 'TIMESTAMP',
                 'null' => true,
             ],
-            'updated_at' => [
+            'update_at' => [
                 'type' => 'TIMESTAMP',
                 'null' => true,
             ],

@@ -12,16 +12,17 @@ class UserStatusModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['User_status_id','User_status_name','User_status_description','update_at'];
+    protected $allowedFields    = ['User_status_name','User_status_description'];
 
     protected bool $allowEmptyInserts = false;
+
+    protected $createdField  = 'create_at';
+    protected $updatedField  = 'update_at';
 
     // Dates
     protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
-    protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at';
+    protected $deletedField  = 'delete_at';
 
     // Validation
     protected $validationRules      = [];

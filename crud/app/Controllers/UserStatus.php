@@ -46,17 +46,17 @@ class UserStatus extends Controller
         //Query Insert Codeigniter
             if ($this->StatusModel->insert($dataModel)) {
               $data['message'] = 'success';
-              $data['response'] = ResponseInterface::HTTP_NO_CONTENT;
+              $data['response'] = ResponseInterface::HTTP_OK;
               $data['data'] = $dataModel;
               $data['csrf'] = csrf_hash();
             }else {
               $data['message'] = 'Error create user';
-              $data['response'] = ResponseInterface::HTTP_OK;
+              $data['response'] = ResponseInterface::HTTP_NO_CONTENT;
               $data['data'] = '';
             }
         } else {
           $data['message'] = 'Error Ajax';
-          $data['response'] = ResponseInterface::HTTP_NO_CONTENT;
+          $data['response'] = ResponseInterface::HTTP_CONFLICT;
           $data['data'] = '';
         }
         //Change array to Json
@@ -145,7 +145,7 @@ class UserStatus extends Controller
             'User_status_id' => $this->request->getVar('User_status_id'),
             'User_status_name' => $this->request->getVar('User_status_name'),
             'User_status_description' => $this->request->getVar('User_status_description'),
-            'updated_at' => $this->request->getVar('updated_at')
+            'update_at' => $this->request->getVar('update_at')
         ];
         return $data;
     }

@@ -12,7 +12,7 @@ const mainApp = new Main(modalId, formId, classEdit, preloadId);
 
 /* These lines of code are declaring and initializing variables in a JavaScript file. Here is a
 breakdown of what each variable is used for: */
-var inserUpdate = TRUE;
+var insertUpdate = true;
 var url = "";
 var method = "";
 var url = "";
@@ -70,7 +70,7 @@ async function delete_(id) {
     data = "";
     if (confirm(textConfirm) == true) {
         resultFetch = getData(data, method, url);
-        resultFetch.then(response => response,json())
+        resultFetch.then(response => response.json())
         .then(data => {
             //console.log(data);
             //Reload View
@@ -191,7 +191,7 @@ $(document).ready(function () {
 });
 
 mainApp.getForm().addEventListener('submit', async function (event) {
-    event.preventDafault();
+    event.preventDefault();
     if (mainApp.setValidateForm()) {
         //Show Preload
         mainApp.showPreload();
@@ -199,7 +199,8 @@ mainApp.getForm().addEventListener('submit', async function (event) {
             method = 'POST';
             url = URI_STATUS + LIST_CRUD[0];
             data = mainApp.getDataFormJson();
-            resultFetch = getData(data, method, url)
+            resultFetch = getData(data, method, url);
+            resultFetch.then(response => response.json())
             .then(data => {
                 //console.log(data);
                 //show Modal
@@ -208,7 +209,7 @@ mainApp.getForm().addEventListener('submit', async function (event) {
                 reloadPage();
             })
             .catch(error => {
-                console.error();
+                console.error(error);
                 //hidden Preload
                 mainApp.hiddenPreload();
             })
